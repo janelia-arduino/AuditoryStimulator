@@ -37,10 +37,6 @@ public:
   AuditoryStimulator();
   virtual void setup();
   virtual void update();
-  void flip(const ConstantString * const polarity_ptr);
-
-  // Handlers
-  virtual void stopPwmHandler(int index);
 
 private:
   modular_server::Property properties_[auditory_stimulator::constants::PROPERTY_COUNT_MAX];
@@ -48,18 +44,8 @@ private:
   modular_server::Function functions_[auditory_stimulator::constants::FUNCTION_COUNT_MAX];
   modular_server::Callback callbacks_[auditory_stimulator::constants::CALLBACK_COUNT_MAX];
 
-  volatile bool flipping_;
-  volatile bool flip_enabled_;
-  volatile long flipper_up_inc_;
-  volatile long flipper_down_inc_;
-  volatile bool flipper_is_up_;
-  volatile long flipper_up_count_;
-
   // Handlers
-  void flipEnabledHandler();
-  void enableFlipHandler();
-  void disableFlipHandler();
-  void flipHandler();
+  void stimulus0Handler();
 
 };
 

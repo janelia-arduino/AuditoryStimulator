@@ -16,20 +16,12 @@ namespace auditory_stimulator
 {
 namespace constants
 {
-enum {DIGITAL_INPUT_COUNT=1};
-enum {ENABLE_DISABLE_INPUT=0};
-
-extern const size_t di_pins[DIGITAL_INPUT_COUNT];
 // Interrupts
 
 // Units
 
 // Properties
 // Property values must be long, double, bool, long[], double[], bool[], char[], ConstantString *
-extern const bool polarity_reversed_default[audio_controller::constants::CHANNEL_COUNT];
-
-extern const bool channels_enabled_default[audio_controller::constants::CHANNEL_COUNT];
-
 
 // Parameters
 
