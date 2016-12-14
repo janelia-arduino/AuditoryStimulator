@@ -33,7 +33,7 @@ extern const long stimulus_delay;
 // Units
 
 // Properties
-// Property values must be long, double, bool, long[], double[], bool[], char[], ConstantString *
+// Property values must be long, double, bool, long[], double[], bool[], char[], ConstantString *, (ConstantString *)[]
 extern ConstantString stimulus_0_mode_property_name;
 enum{STIMULUS_MODE_SUBSET_LENGTH=2};
 extern ConstantString stimulus_mode_tone;
