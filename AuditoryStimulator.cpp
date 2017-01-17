@@ -240,7 +240,8 @@ void AuditoryStimulator::stimulus0Handler(modular_server::Interrupt * interrupt_
   if (interrupt_ptr)
   {
     int pin_value = digitalRead(interrupt_ptr->getPin());
-    if ((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high))
+    if (((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high)) ||
+        ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
     {
       play = true;
     }
@@ -248,6 +249,10 @@ void AuditoryStimulator::stimulus0Handler(modular_server::Interrupt * interrupt_
   else
   {
     play = !stimulus_0_playing_;
+  }
+  if ((!play) && (!stimulus_0_playing_))
+  {
+    return;
   }
   stimulus(play,stimulus_mode_ptr,stimulus_frequency,stimulus_duration);
   stimulus_0_playing_ = play;
@@ -267,7 +272,8 @@ void AuditoryStimulator::stimulus1Handler(modular_server::Interrupt * interrupt_
   if (interrupt_ptr)
   {
     int pin_value = digitalRead(interrupt_ptr->getPin());
-    if ((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high))
+    if (((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high)) ||
+        ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
     {
       play = true;
     }
@@ -275,6 +281,10 @@ void AuditoryStimulator::stimulus1Handler(modular_server::Interrupt * interrupt_
   else
   {
     play = !stimulus_1_playing_;
+  }
+  if ((!play) && (!stimulus_1_playing_))
+  {
+    return;
   }
   stimulus(play,stimulus_mode_ptr,stimulus_frequency,stimulus_duration);
   stimulus_1_playing_ = play;
@@ -294,7 +304,8 @@ void AuditoryStimulator::stimulus2Handler(modular_server::Interrupt * interrupt_
   if (interrupt_ptr)
   {
     int pin_value = digitalRead(interrupt_ptr->getPin());
-    if ((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high))
+    if (((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high)) ||
+        ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
     {
       play = true;
     }
@@ -302,6 +313,10 @@ void AuditoryStimulator::stimulus2Handler(modular_server::Interrupt * interrupt_
   else
   {
     play = !stimulus_2_playing_;
+  }
+  if ((!play) && (!stimulus_2_playing_))
+  {
+    return;
   }
   stimulus(play,stimulus_mode_ptr,stimulus_frequency,stimulus_duration);
   stimulus_2_playing_ = play;
@@ -321,7 +336,8 @@ void AuditoryStimulator::stimulus3Handler(modular_server::Interrupt * interrupt_
   if (interrupt_ptr)
   {
     int pin_value = digitalRead(interrupt_ptr->getPin());
-    if ((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high))
+    if (((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high)) ||
+        ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
     {
       play = true;
     }
@@ -329,6 +345,10 @@ void AuditoryStimulator::stimulus3Handler(modular_server::Interrupt * interrupt_
   else
   {
     play = !stimulus_3_playing_;
+  }
+  if ((!play) && (!stimulus_3_playing_))
+  {
+    return;
   }
   stimulus(play,stimulus_mode_ptr,stimulus_frequency,stimulus_duration);
   stimulus_3_playing_ = play;
