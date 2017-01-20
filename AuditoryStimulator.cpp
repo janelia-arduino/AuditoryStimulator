@@ -42,6 +42,7 @@ void AuditoryStimulator::setup()
                               callbacks_);
 
   // Properties
+  // stimulus_0
   modular_server::Property & stimulus_0_mode_property = modular_server_.createProperty(constants::stimulus_0_mode_property_name,constants::stimulus_0_mode_ptr_default);
   stimulus_0_mode_property.setSubset(constants::stimulus_mode_ptr_subset);
 
@@ -56,6 +57,13 @@ void AuditoryStimulator::setup()
   stimulus_0_duration_property.setUnits(audio_controller::constants::ms_unit);
   stimulus_0_duration_property.setRange(constants::stimulus_duration_min,constants::stimulus_duration_max);
 
+  modular_server::Property & stimulus_0_volume_property = modular_server_.createProperty(constants::stimulus_0_volume_property_name,constants::stimulus_0_volume_default);
+  stimulus_0_volume_property.setRange(constants::stimulus_volume_min,constants::stimulus_volume_max);
+
+  modular_server::Property & stimulus_0_bandwidth_property = modular_server_.createProperty(constants::stimulus_0_bandwidth_property_name,constants::stimulus_0_bandwidth_default);
+  stimulus_0_bandwidth_property.setRange(constants::stimulus_bandwidth_min,constants::stimulus_bandwidth_max);
+
+  // stimulus_1
   modular_server::Property & stimulus_1_mode_property = modular_server_.createProperty(constants::stimulus_1_mode_property_name,constants::stimulus_1_mode_ptr_default);
   stimulus_1_mode_property.setSubset(constants::stimulus_mode_ptr_subset);
 
@@ -70,6 +78,13 @@ void AuditoryStimulator::setup()
   stimulus_1_duration_property.setUnits(audio_controller::constants::ms_unit);
   stimulus_1_duration_property.setRange(constants::stimulus_duration_min,constants::stimulus_duration_max);
 
+  modular_server::Property & stimulus_1_volume_property = modular_server_.createProperty(constants::stimulus_1_volume_property_name,constants::stimulus_1_volume_default);
+  stimulus_1_volume_property.setRange(constants::stimulus_volume_min,constants::stimulus_volume_max);
+
+  modular_server::Property & stimulus_1_bandwidth_property = modular_server_.createProperty(constants::stimulus_1_bandwidth_property_name,constants::stimulus_1_bandwidth_default);
+  stimulus_1_bandwidth_property.setRange(constants::stimulus_bandwidth_min,constants::stimulus_bandwidth_max);
+
+  // stimulus_2
   modular_server::Property & stimulus_2_mode_property = modular_server_.createProperty(constants::stimulus_2_mode_property_name,constants::stimulus_2_mode_ptr_default);
   stimulus_2_mode_property.setSubset(constants::stimulus_mode_ptr_subset);
 
@@ -84,6 +99,13 @@ void AuditoryStimulator::setup()
   stimulus_2_duration_property.setUnits(audio_controller::constants::ms_unit);
   stimulus_2_duration_property.setRange(constants::stimulus_duration_min,constants::stimulus_duration_max);
 
+  modular_server::Property & stimulus_2_volume_property = modular_server_.createProperty(constants::stimulus_2_volume_property_name,constants::stimulus_2_volume_default);
+  stimulus_2_volume_property.setRange(constants::stimulus_volume_min,constants::stimulus_volume_max);
+
+  modular_server::Property & stimulus_2_bandwidth_property = modular_server_.createProperty(constants::stimulus_2_bandwidth_property_name,constants::stimulus_2_bandwidth_default);
+  stimulus_2_bandwidth_property.setRange(constants::stimulus_bandwidth_min,constants::stimulus_bandwidth_max);
+
+  // stimulus_3
   modular_server::Property & stimulus_3_mode_property = modular_server_.createProperty(constants::stimulus_3_mode_property_name,constants::stimulus_3_mode_ptr_default);
   stimulus_3_mode_property.setSubset(constants::stimulus_mode_ptr_subset);
 
@@ -98,6 +120,12 @@ void AuditoryStimulator::setup()
   stimulus_3_duration_property.setUnits(audio_controller::constants::ms_unit);
   stimulus_3_duration_property.setRange(constants::stimulus_duration_min,constants::stimulus_duration_max);
 
+  modular_server::Property & stimulus_3_volume_property = modular_server_.createProperty(constants::stimulus_3_volume_property_name,constants::stimulus_3_volume_default);
+  stimulus_3_volume_property.setRange(constants::stimulus_volume_min,constants::stimulus_volume_max);
+
+  modular_server::Property & stimulus_3_bandwidth_property = modular_server_.createProperty(constants::stimulus_3_bandwidth_property_name,constants::stimulus_3_bandwidth_default);
+  stimulus_3_bandwidth_property.setRange(constants::stimulus_bandwidth_min,constants::stimulus_bandwidth_max);
+
   // Parameters
 
   // Functions
@@ -109,6 +137,8 @@ void AuditoryStimulator::setup()
   stimulus_0_callback.addProperty(stimulus_0_polarity_property);
   stimulus_0_callback.addProperty(stimulus_0_frequency_property);
   stimulus_0_callback.addProperty(stimulus_0_duration_property);
+  stimulus_0_callback.addProperty(stimulus_0_volume_property);
+  stimulus_0_callback.addProperty(stimulus_0_bandwidth_property);
 #if defined(__MK20DX256__)
   stimulus_0_callback.attachTo(audio_controller::constants::int_a_interrupt_name,modular_server::interrupt::mode_change);
 #endif
@@ -119,6 +149,8 @@ void AuditoryStimulator::setup()
   stimulus_1_callback.addProperty(stimulus_1_polarity_property);
   stimulus_1_callback.addProperty(stimulus_1_frequency_property);
   stimulus_1_callback.addProperty(stimulus_1_duration_property);
+  stimulus_1_callback.addProperty(stimulus_1_volume_property);
+  stimulus_1_callback.addProperty(stimulus_1_bandwidth_property);
 #if defined(__MK20DX256__)
   stimulus_1_callback.attachTo(audio_controller::constants::int_b_interrupt_name,modular_server::interrupt::mode_change);
 #endif
@@ -129,6 +161,8 @@ void AuditoryStimulator::setup()
   stimulus_2_callback.addProperty(stimulus_2_polarity_property);
   stimulus_2_callback.addProperty(stimulus_2_frequency_property);
   stimulus_2_callback.addProperty(stimulus_2_duration_property);
+  stimulus_2_callback.addProperty(stimulus_2_volume_property);
+  stimulus_2_callback.addProperty(stimulus_2_bandwidth_property);
 #if defined(__MK20DX256__)
   stimulus_2_callback.attachTo(audio_controller::constants::int_c_interrupt_name,modular_server::interrupt::mode_change);
 #endif
@@ -139,6 +173,8 @@ void AuditoryStimulator::setup()
   stimulus_3_callback.addProperty(stimulus_3_polarity_property);
   stimulus_3_callback.addProperty(stimulus_3_frequency_property);
   stimulus_3_callback.addProperty(stimulus_3_duration_property);
+  stimulus_3_callback.addProperty(stimulus_3_volume_property);
+  stimulus_3_callback.addProperty(stimulus_3_bandwidth_property);
 #if defined(__MK20DX256__)
   stimulus_3_callback.attachTo(audio_controller::constants::int_d_interrupt_name,modular_server::interrupt::mode_change);
 #endif
@@ -154,7 +190,9 @@ void AuditoryStimulator::update()
 void AuditoryStimulator::stimulus(bool play,
                                   const ConstantString * mode_ptr,
                                   long frequency,
-                                  long duration)
+                                  long duration,
+                                  double volume,
+                                  double bandwidth)
 {
   stimulus_0_playing_ = false;
   stimulus_1_playing_ = false;
@@ -166,31 +204,51 @@ void AuditoryStimulator::stimulus(bool play,
     {
       if (duration <= 0)
       {
-        playTone(frequency,&audio_controller::constants::speaker_all);
+        playToneAt(frequency,&audio_controller::constants::speaker_all,volume);
       }
       else
       {
-        addTonePwm(frequency,
-                   &audio_controller::constants::speaker_all,
-                   constants::stimulus_delay,
-                   duration*2,
-                   duration,
-                   1);
+        addTonePwmAt(frequency,
+                     &audio_controller::constants::speaker_all,
+                     volume,
+                     constants::stimulus_delay,
+                     duration*2,
+                     duration,
+                     1);
       }
     }
     else if (mode_ptr == &constants::stimulus_mode_noise)
     {
       if (duration <= 0)
       {
-        playNoise(&audio_controller::constants::speaker_all);
+        playNoiseAt(&audio_controller::constants::speaker_all,volume);
       }
       else
       {
-        addNoisePwm(&audio_controller::constants::speaker_all,
-                    constants::stimulus_delay,
-                    duration*2,
-                    duration,
-                    1);
+        addNoisePwmAt(&audio_controller::constants::speaker_all,
+                      volume,
+                      constants::stimulus_delay,
+                      duration*2,
+                      duration,
+                      1);
+      }
+    }
+    else if (mode_ptr == &constants::stimulus_mode_filtered_noise)
+    {
+      if (duration <= 0)
+      {
+        playFilteredNoiseAt(frequency,bandwidth,&audio_controller::constants::speaker_all,volume);
+      }
+      else
+      {
+        addFilteredNoisePwmAt(frequency,
+                              bandwidth,
+                              &audio_controller::constants::speaker_all,
+                              volume,
+                              constants::stimulus_delay,
+                              duration*2,
+                              duration,
+                              1);
       }
     }
   }
@@ -232,10 +290,14 @@ void AuditoryStimulator::stimulus0Handler(modular_server::Interrupt * interrupt_
   modular_server_.property(constants::stimulus_0_mode_property_name).getValue(stimulus_mode_ptr);
   const ConstantString * stimulus_polarity_ptr;
   modular_server_.property(constants::stimulus_0_polarity_property_name).getValue(stimulus_polarity_ptr);
-  long stimulus_frequency;
-  modular_server_.property(constants::stimulus_0_frequency_property_name).getValue(stimulus_frequency);
-  long stimulus_duration;
-  modular_server_.property(constants::stimulus_0_duration_property_name).getValue(stimulus_duration);
+  long frequency;
+  modular_server_.property(constants::stimulus_0_frequency_property_name).getValue(frequency);
+  long duration;
+  modular_server_.property(constants::stimulus_0_duration_property_name).getValue(duration);
+  double volume;
+  modular_server_.property(constants::stimulus_0_volume_property_name).getValue(volume);
+  double bandwidth;
+  modular_server_.property(constants::stimulus_0_bandwidth_property_name).getValue(bandwidth);
   bool play = false;
   if (interrupt_ptr)
   {
@@ -254,7 +316,7 @@ void AuditoryStimulator::stimulus0Handler(modular_server::Interrupt * interrupt_
   {
     return;
   }
-  stimulus(play,stimulus_mode_ptr,stimulus_frequency,stimulus_duration);
+  stimulus(play,stimulus_mode_ptr,frequency,duration,volume,bandwidth);
   stimulus_0_playing_ = play;
 }
 
@@ -264,10 +326,14 @@ void AuditoryStimulator::stimulus1Handler(modular_server::Interrupt * interrupt_
   modular_server_.property(constants::stimulus_1_mode_property_name).getValue(stimulus_mode_ptr);
   const ConstantString * stimulus_polarity_ptr;
   modular_server_.property(constants::stimulus_1_polarity_property_name).getValue(stimulus_polarity_ptr);
-  long stimulus_frequency;
-  modular_server_.property(constants::stimulus_1_frequency_property_name).getValue(stimulus_frequency);
-  long stimulus_duration;
-  modular_server_.property(constants::stimulus_1_duration_property_name).getValue(stimulus_duration);
+  long frequency;
+  modular_server_.property(constants::stimulus_1_frequency_property_name).getValue(frequency);
+  long duration;
+  modular_server_.property(constants::stimulus_1_duration_property_name).getValue(duration);
+  double volume;
+  modular_server_.property(constants::stimulus_1_volume_property_name).getValue(volume);
+  double bandwidth;
+  modular_server_.property(constants::stimulus_1_bandwidth_property_name).getValue(bandwidth);
   bool play = false;
   if (interrupt_ptr)
   {
@@ -286,7 +352,7 @@ void AuditoryStimulator::stimulus1Handler(modular_server::Interrupt * interrupt_
   {
     return;
   }
-  stimulus(play,stimulus_mode_ptr,stimulus_frequency,stimulus_duration);
+  stimulus(play,stimulus_mode_ptr,frequency,duration,volume,bandwidth);
   stimulus_1_playing_ = play;
 }
 
@@ -296,10 +362,14 @@ void AuditoryStimulator::stimulus2Handler(modular_server::Interrupt * interrupt_
   modular_server_.property(constants::stimulus_2_mode_property_name).getValue(stimulus_mode_ptr);
   const ConstantString * stimulus_polarity_ptr;
   modular_server_.property(constants::stimulus_2_polarity_property_name).getValue(stimulus_polarity_ptr);
-  long stimulus_frequency;
-  modular_server_.property(constants::stimulus_2_frequency_property_name).getValue(stimulus_frequency);
-  long stimulus_duration;
-  modular_server_.property(constants::stimulus_2_duration_property_name).getValue(stimulus_duration);
+  long frequency;
+  modular_server_.property(constants::stimulus_2_frequency_property_name).getValue(frequency);
+  long duration;
+  modular_server_.property(constants::stimulus_2_duration_property_name).getValue(duration);
+  double volume;
+  modular_server_.property(constants::stimulus_2_volume_property_name).getValue(volume);
+  double bandwidth;
+  modular_server_.property(constants::stimulus_2_bandwidth_property_name).getValue(bandwidth);
   bool play = false;
   if (interrupt_ptr)
   {
@@ -318,7 +388,7 @@ void AuditoryStimulator::stimulus2Handler(modular_server::Interrupt * interrupt_
   {
     return;
   }
-  stimulus(play,stimulus_mode_ptr,stimulus_frequency,stimulus_duration);
+  stimulus(play,stimulus_mode_ptr,frequency,duration,volume,bandwidth);
   stimulus_2_playing_ = play;
 }
 
@@ -328,10 +398,14 @@ void AuditoryStimulator::stimulus3Handler(modular_server::Interrupt * interrupt_
   modular_server_.property(constants::stimulus_3_mode_property_name).getValue(stimulus_mode_ptr);
   const ConstantString * stimulus_polarity_ptr;
   modular_server_.property(constants::stimulus_3_polarity_property_name).getValue(stimulus_polarity_ptr);
-  long stimulus_frequency;
-  modular_server_.property(constants::stimulus_3_frequency_property_name).getValue(stimulus_frequency);
-  long stimulus_duration;
-  modular_server_.property(constants::stimulus_3_duration_property_name).getValue(stimulus_duration);
+  long frequency;
+  modular_server_.property(constants::stimulus_3_frequency_property_name).getValue(frequency);
+  long duration;
+  modular_server_.property(constants::stimulus_3_duration_property_name).getValue(duration);
+  double volume;
+  modular_server_.property(constants::stimulus_3_volume_property_name).getValue(volume);
+  double bandwidth;
+  modular_server_.property(constants::stimulus_3_bandwidth_property_name).getValue(bandwidth);
   bool play = false;
   if (interrupt_ptr)
   {
@@ -350,6 +424,6 @@ void AuditoryStimulator::stimulus3Handler(modular_server::Interrupt * interrupt_
   {
     return;
   }
-  stimulus(play,stimulus_mode_ptr,stimulus_frequency,stimulus_duration);
+  stimulus(play,stimulus_mode_ptr,frequency,duration,volume,bandwidth);
   stimulus_3_playing_ = play;
 }

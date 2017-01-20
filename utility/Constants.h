@@ -16,7 +16,7 @@ namespace auditory_stimulator
 namespace constants
 {
 //MAX values must be >= 1, >= created/copied count, < RAM limit
-enum{PROPERTY_COUNT_MAX=16};
+enum{PROPERTY_COUNT_MAX=28};
 enum{PARAMETER_COUNT_MAX=1};
 enum{FUNCTION_COUNT_MAX=1};
 enum{CALLBACK_COUNT_MAX=4};
@@ -34,10 +34,15 @@ extern const long stimulus_delay;
 
 // Properties
 // Property values must be long, double, bool, long[], double[], bool[], char[], ConstantString *, (ConstantString *)[]
+// stimulus_0
 extern ConstantString stimulus_0_mode_property_name;
-enum{STIMULUS_MODE_SUBSET_LENGTH=2};
+enum{STIMULUS_MODE_SUBSET_LENGTH=6};
 extern ConstantString stimulus_mode_tone;
 extern ConstantString stimulus_mode_noise;
+extern ConstantString stimulus_mode_filtered_noise;
+extern ConstantString stimulus_mode_pulsed_tone;
+extern ConstantString stimulus_mode_pulsed_noise;
+extern ConstantString stimulus_mode_pulsed_filtered_noise;
 extern modular_server::SubsetMemberType stimulus_mode_ptr_subset[STIMULUS_MODE_SUBSET_LENGTH];
 extern const ConstantString * const stimulus_0_mode_ptr_default;
 
@@ -58,6 +63,17 @@ extern const long stimulus_duration_min;
 extern const long stimulus_duration_max;
 extern const long stimulus_0_duration_default;
 
+extern ConstantString stimulus_0_volume_property_name;
+extern const double stimulus_volume_min;
+extern const double stimulus_volume_max;
+extern const double stimulus_0_volume_default;
+
+extern ConstantString stimulus_0_bandwidth_property_name;
+extern const double stimulus_bandwidth_min;
+extern const double stimulus_bandwidth_max;
+extern const double stimulus_0_bandwidth_default;
+
+// stimulus_1
 extern ConstantString stimulus_1_mode_property_name;
 extern const ConstantString * const stimulus_1_mode_ptr_default;
 
@@ -70,6 +86,13 @@ extern const long stimulus_1_frequency_default;
 extern ConstantString stimulus_1_duration_property_name;
 extern const long stimulus_1_duration_default;
 
+extern ConstantString stimulus_1_volume_property_name;
+extern const double stimulus_1_volume_default;
+
+extern ConstantString stimulus_1_bandwidth_property_name;
+extern const double stimulus_1_bandwidth_default;
+
+// stimulus_2
 extern ConstantString stimulus_2_mode_property_name;
 extern const ConstantString * const stimulus_2_mode_ptr_default;
 
@@ -82,6 +105,13 @@ extern const long stimulus_2_frequency_default;
 extern ConstantString stimulus_2_duration_property_name;
 extern const long stimulus_2_duration_default;
 
+extern ConstantString stimulus_2_volume_property_name;
+extern const double stimulus_2_volume_default;
+
+extern ConstantString stimulus_2_bandwidth_property_name;
+extern const double stimulus_2_bandwidth_default;
+
+// stimulus_3
 extern ConstantString stimulus_3_mode_property_name;
 extern const ConstantString * const stimulus_3_mode_ptr_default;
 
@@ -93,6 +123,12 @@ extern const long stimulus_3_frequency_default;
 
 extern ConstantString stimulus_3_duration_property_name;
 extern const long stimulus_3_duration_default;
+
+extern ConstantString stimulus_3_volume_property_name;
+extern const double stimulus_3_volume_default;
+
+extern ConstantString stimulus_3_bandwidth_property_name;
+extern const double stimulus_3_bandwidth_default;
 
 // Parameters
 

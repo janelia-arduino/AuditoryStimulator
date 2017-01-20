@@ -41,7 +41,9 @@ public:
   void stimulus(bool play,
                 const ConstantString * mode_ptr,
                 long frequency,
-                long duration);
+                long duration,
+                double volume,
+                double bandwidth);
 
   // Handlers
   virtual void stopPwmHandler(int index);
