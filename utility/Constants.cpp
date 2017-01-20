@@ -36,17 +36,17 @@ CONSTANT_STRING(stimulus_0_mode_property_name,"stimulus0Mode");
 CONSTANT_STRING(stimulus_mode_tone,"TONE");
 CONSTANT_STRING(stimulus_mode_noise,"NOISE");
 CONSTANT_STRING(stimulus_mode_filtered_noise,"FILTERED_NOISE");
-CONSTANT_STRING(stimulus_mode_pulsed_tone,"PULSED_TONE");
-CONSTANT_STRING(stimulus_mode_pulsed_noise,"PULSED_NOISE");
-CONSTANT_STRING(stimulus_mode_pulsed_filtered_noise,"PULSED_FILTERED_NOISE");
+CONSTANT_STRING(stimulus_mode_tone_pwm,"TONE_PWM");
+CONSTANT_STRING(stimulus_mode_noise_pwm,"NOISE_PWM");
+CONSTANT_STRING(stimulus_mode_filtered_noise_pwm,"FILTERED_NOISE_PWM");
 modular_server::SubsetMemberType stimulus_mode_ptr_subset[STIMULUS_MODE_SUBSET_LENGTH] =
   {
     {.cs_ptr=&stimulus_mode_tone},
     {.cs_ptr=&stimulus_mode_noise},
     {.cs_ptr=&stimulus_mode_filtered_noise},
-    {.cs_ptr=&stimulus_mode_pulsed_tone},
-    {.cs_ptr=&stimulus_mode_pulsed_noise},
-    {.cs_ptr=&stimulus_mode_pulsed_filtered_noise},
+    {.cs_ptr=&stimulus_mode_tone_pwm},
+    {.cs_ptr=&stimulus_mode_noise_pwm},
+    {.cs_ptr=&stimulus_mode_filtered_noise_pwm},
   };
 const ConstantString * const stimulus_0_mode_ptr_default = &stimulus_mode_tone;
 
@@ -80,6 +80,11 @@ const double stimulus_bandwidth_min = audio_controller::constants::bandwidth_min
 const double stimulus_bandwidth_max = audio_controller::constants::bandwidth_max;
 const double stimulus_0_bandwidth_default = 0.5;
 
+CONSTANT_STRING(stimulus_0_pwm_period_property_name,"stimulus0PwmPeriod");
+const long stimulus_pwm_period_min = 2;
+const long stimulus_pwm_period_max = 10000;
+const long stimulus_0_pwm_period_default = 100;
+
 // stimulus_1
 CONSTANT_STRING(stimulus_1_mode_property_name,"stimulus1Mode");
 const ConstantString * const stimulus_1_mode_ptr_default = &stimulus_mode_tone;
@@ -97,7 +102,10 @@ CONSTANT_STRING(stimulus_1_volume_property_name,"stimulus1Volume");
 const double stimulus_1_volume_default = audio_controller::constants::volume_default;
 
 CONSTANT_STRING(stimulus_1_bandwidth_property_name,"stimulus1Bandwidth");
-const double stimulus_1_bandwidth_default = 0.5;
+const double stimulus_1_bandwidth_default = stimulus_0_bandwidth_default;
+
+CONSTANT_STRING(stimulus_1_pwm_period_property_name,"stimulus1PwmPeriod");
+const long stimulus_1_pwm_period_default = stimulus_0_pwm_period_default;
 
 // stimulus_2
 CONSTANT_STRING(stimulus_2_mode_property_name,"stimulus2Mode");
@@ -116,7 +124,10 @@ CONSTANT_STRING(stimulus_2_volume_property_name,"stimulus2Volume");
 const double stimulus_2_volume_default = audio_controller::constants::volume_default;
 
 CONSTANT_STRING(stimulus_2_bandwidth_property_name,"stimulus2Bandwidth");
-const double stimulus_2_bandwidth_default = 0.5;
+const double stimulus_2_bandwidth_default = stimulus_0_bandwidth_default;
+
+CONSTANT_STRING(stimulus_2_pwm_period_property_name,"stimulus2PwmPeriod");
+const long stimulus_2_pwm_period_default = stimulus_0_pwm_period_default;
 
 // stimulus_3
 CONSTANT_STRING(stimulus_3_mode_property_name,"stimulus3Mode");
@@ -135,7 +146,10 @@ CONSTANT_STRING(stimulus_3_volume_property_name,"stimulus3Volume");
 const double stimulus_3_volume_default = audio_controller::constants::volume_default;
 
 CONSTANT_STRING(stimulus_3_bandwidth_property_name,"stimulus3Bandwidth");
-const double stimulus_3_bandwidth_default = 0.5;
+const double stimulus_3_bandwidth_default = stimulus_0_bandwidth_default;
+
+CONSTANT_STRING(stimulus_3_pwm_period_property_name,"stimulus3PwmPeriod");
+const long stimulus_3_pwm_period_default = stimulus_0_pwm_period_default;
 
 // Parameters
 

@@ -40,9 +40,9 @@ enum{STIMULUS_MODE_SUBSET_LENGTH=6};
 extern ConstantString stimulus_mode_tone;
 extern ConstantString stimulus_mode_noise;
 extern ConstantString stimulus_mode_filtered_noise;
-extern ConstantString stimulus_mode_pulsed_tone;
-extern ConstantString stimulus_mode_pulsed_noise;
-extern ConstantString stimulus_mode_pulsed_filtered_noise;
+extern ConstantString stimulus_mode_tone_pwm;
+extern ConstantString stimulus_mode_noise_pwm;
+extern ConstantString stimulus_mode_filtered_noise_pwm;
 extern modular_server::SubsetMemberType stimulus_mode_ptr_subset[STIMULUS_MODE_SUBSET_LENGTH];
 extern const ConstantString * const stimulus_0_mode_ptr_default;
 
@@ -73,6 +73,11 @@ extern const double stimulus_bandwidth_min;
 extern const double stimulus_bandwidth_max;
 extern const double stimulus_0_bandwidth_default;
 
+extern ConstantString stimulus_0_pwm_period_property_name;
+extern const long stimulus_pwm_period_min;
+extern const long stimulus_pwm_period_max;
+extern const long stimulus_0_pwm_period_default;
+
 // stimulus_1
 extern ConstantString stimulus_1_mode_property_name;
 extern const ConstantString * const stimulus_1_mode_ptr_default;
@@ -91,6 +96,9 @@ extern const double stimulus_1_volume_default;
 
 extern ConstantString stimulus_1_bandwidth_property_name;
 extern const double stimulus_1_bandwidth_default;
+
+extern ConstantString stimulus_1_pwm_period_property_name;
+extern const long stimulus_1_pwm_period_default;
 
 // stimulus_2
 extern ConstantString stimulus_2_mode_property_name;
@@ -111,6 +119,9 @@ extern const double stimulus_2_volume_default;
 extern ConstantString stimulus_2_bandwidth_property_name;
 extern const double stimulus_2_bandwidth_default;
 
+extern ConstantString stimulus_2_pwm_period_property_name;
+extern const long stimulus_2_pwm_period_default;
+
 // stimulus_3
 extern ConstantString stimulus_3_mode_property_name;
 extern const ConstantString * const stimulus_3_mode_ptr_default;
@@ -129,6 +140,9 @@ extern const double stimulus_3_volume_default;
 
 extern ConstantString stimulus_3_bandwidth_property_name;
 extern const double stimulus_3_bandwidth_default;
+
+extern ConstantString stimulus_3_pwm_period_property_name;
+extern const long stimulus_3_pwm_period_default;
 
 // Parameters
 

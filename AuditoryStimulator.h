@@ -43,7 +43,8 @@ public:
                 long frequency,
                 long duration,
                 double volume,
-                double bandwidth);
+                double bandwidth,
+                long pwm_period);
 
   // Handlers
   virtual void stopPwmHandler(int index);
