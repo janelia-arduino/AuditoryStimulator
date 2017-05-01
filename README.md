@@ -8,7 +8,13 @@ License:
 
     BSD
 
-[Examples](./examples)
+## Inherits
+
+[ModularServer](https://github.com/janelia-arduino/ModularServer)
+
+[ModularDeviceBase](https://github.com/janelia-arduino/ModularDeviceBase)
+
+[AudioController](https://github.com/janelia-arduino/AudioController)
 
 ## API
 
