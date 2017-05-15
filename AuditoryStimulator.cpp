@@ -50,11 +50,11 @@ void AuditoryStimulator::setup()
   stimulus_0_polarity_property.setSubset(constants::stimulus_polarity_ptr_subset);
 
   modular_server::Property & stimulus_0_frequency_property = modular_server_.createProperty(constants::stimulus_0_frequency_property_name,constants::stimulus_0_frequency_default);
-  stimulus_0_frequency_property.setUnits(audio_controller::constants::hz_unit);
+  stimulus_0_frequency_property.setUnits(audio_controller::constants::hz_units);
   stimulus_0_frequency_property.setRange(constants::stimulus_frequency_min,constants::stimulus_frequency_max);
 
   modular_server::Property & stimulus_0_duration_property = modular_server_.createProperty(constants::stimulus_0_duration_property_name,constants::stimulus_0_duration_default);
-  stimulus_0_duration_property.setUnits(audio_controller::constants::ms_unit);
+  stimulus_0_duration_property.setUnits(audio_controller::constants::ms_units);
   stimulus_0_duration_property.setRange(constants::stimulus_duration_min,constants::stimulus_duration_max);
 
   modular_server::Property & stimulus_0_volume_property = modular_server_.createProperty(constants::stimulus_0_volume_property_name,constants::stimulus_0_volume_default);
@@ -64,7 +64,7 @@ void AuditoryStimulator::setup()
   stimulus_0_bandwidth_property.setRange(constants::stimulus_bandwidth_min,constants::stimulus_bandwidth_max);
 
   modular_server::Property & stimulus_0_pwm_period_property = modular_server_.createProperty(constants::stimulus_0_pwm_period_property_name,constants::stimulus_0_pwm_period_default);
-  stimulus_0_pwm_period_property.setUnits(audio_controller::constants::ms_unit);
+  stimulus_0_pwm_period_property.setUnits(audio_controller::constants::ms_units);
   stimulus_0_pwm_period_property.setRange(constants::stimulus_pwm_period_min,constants::stimulus_pwm_period_max);
 
   // stimulus_1
@@ -75,11 +75,11 @@ void AuditoryStimulator::setup()
   stimulus_1_polarity_property.setSubset(constants::stimulus_polarity_ptr_subset);
 
   modular_server::Property & stimulus_1_frequency_property = modular_server_.createProperty(constants::stimulus_1_frequency_property_name,constants::stimulus_1_frequency_default);
-  stimulus_1_frequency_property.setUnits(audio_controller::constants::hz_unit);
+  stimulus_1_frequency_property.setUnits(audio_controller::constants::hz_units);
   stimulus_1_frequency_property.setRange(constants::stimulus_frequency_min,constants::stimulus_frequency_max);
 
   modular_server::Property & stimulus_1_duration_property = modular_server_.createProperty(constants::stimulus_1_duration_property_name,constants::stimulus_1_duration_default);
-  stimulus_1_duration_property.setUnits(audio_controller::constants::ms_unit);
+  stimulus_1_duration_property.setUnits(audio_controller::constants::ms_units);
   stimulus_1_duration_property.setRange(constants::stimulus_duration_min,constants::stimulus_duration_max);
 
   modular_server::Property & stimulus_1_volume_property = modular_server_.createProperty(constants::stimulus_1_volume_property_name,constants::stimulus_1_volume_default);
@@ -89,7 +89,7 @@ void AuditoryStimulator::setup()
   stimulus_1_bandwidth_property.setRange(constants::stimulus_bandwidth_min,constants::stimulus_bandwidth_max);
 
   modular_server::Property & stimulus_1_pwm_period_property = modular_server_.createProperty(constants::stimulus_1_pwm_period_property_name,constants::stimulus_1_pwm_period_default);
-  stimulus_1_pwm_period_property.setUnits(audio_controller::constants::ms_unit);
+  stimulus_1_pwm_period_property.setUnits(audio_controller::constants::ms_units);
   stimulus_1_pwm_period_property.setRange(constants::stimulus_pwm_period_min,constants::stimulus_pwm_period_max);
 
   // stimulus_2
@@ -100,11 +100,11 @@ void AuditoryStimulator::setup()
   stimulus_2_polarity_property.setSubset(constants::stimulus_polarity_ptr_subset);
 
   modular_server::Property & stimulus_2_frequency_property = modular_server_.createProperty(constants::stimulus_2_frequency_property_name,constants::stimulus_2_frequency_default);
-  stimulus_2_frequency_property.setUnits(audio_controller::constants::hz_unit);
+  stimulus_2_frequency_property.setUnits(audio_controller::constants::hz_units);
   stimulus_2_frequency_property.setRange(constants::stimulus_frequency_min,constants::stimulus_frequency_max);
 
   modular_server::Property & stimulus_2_duration_property = modular_server_.createProperty(constants::stimulus_2_duration_property_name,constants::stimulus_2_duration_default);
-  stimulus_2_duration_property.setUnits(audio_controller::constants::ms_unit);
+  stimulus_2_duration_property.setUnits(audio_controller::constants::ms_units);
   stimulus_2_duration_property.setRange(constants::stimulus_duration_min,constants::stimulus_duration_max);
 
   modular_server::Property & stimulus_2_volume_property = modular_server_.createProperty(constants::stimulus_2_volume_property_name,constants::stimulus_2_volume_default);
@@ -114,7 +114,7 @@ void AuditoryStimulator::setup()
   stimulus_2_bandwidth_property.setRange(constants::stimulus_bandwidth_min,constants::stimulus_bandwidth_max);
 
   modular_server::Property & stimulus_2_pwm_period_property = modular_server_.createProperty(constants::stimulus_2_pwm_period_property_name,constants::stimulus_2_pwm_period_default);
-  stimulus_2_pwm_period_property.setUnits(audio_controller::constants::ms_unit);
+  stimulus_2_pwm_period_property.setUnits(audio_controller::constants::ms_units);
   stimulus_2_pwm_period_property.setRange(constants::stimulus_pwm_period_min,constants::stimulus_pwm_period_max);
 
   // stimulus_3
@@ -125,11 +125,11 @@ void AuditoryStimulator::setup()
   stimulus_3_polarity_property.setSubset(constants::stimulus_polarity_ptr_subset);
 
   modular_server::Property & stimulus_3_frequency_property = modular_server_.createProperty(constants::stimulus_3_frequency_property_name,constants::stimulus_3_frequency_default);
-  stimulus_3_frequency_property.setUnits(audio_controller::constants::hz_unit);
+  stimulus_3_frequency_property.setUnits(audio_controller::constants::hz_units);
   stimulus_3_frequency_property.setRange(constants::stimulus_frequency_min,constants::stimulus_frequency_max);
 
   modular_server::Property & stimulus_3_duration_property = modular_server_.createProperty(constants::stimulus_3_duration_property_name,constants::stimulus_3_duration_default);
-  stimulus_3_duration_property.setUnits(audio_controller::constants::ms_unit);
+  stimulus_3_duration_property.setUnits(audio_controller::constants::ms_units);
   stimulus_3_duration_property.setRange(constants::stimulus_duration_min,constants::stimulus_duration_max);
 
   modular_server::Property & stimulus_3_volume_property = modular_server_.createProperty(constants::stimulus_3_volume_property_name,constants::stimulus_3_volume_default);
@@ -139,7 +139,7 @@ void AuditoryStimulator::setup()
   stimulus_3_bandwidth_property.setRange(constants::stimulus_bandwidth_min,constants::stimulus_bandwidth_max);
 
   modular_server::Property & stimulus_3_pwm_period_property = modular_server_.createProperty(constants::stimulus_3_pwm_period_property_name,constants::stimulus_3_pwm_period_default);
-  stimulus_3_pwm_period_property.setUnits(audio_controller::constants::ms_unit);
+  stimulus_3_pwm_period_property.setUnits(audio_controller::constants::ms_units);
   stimulus_3_pwm_period_property.setRange(constants::stimulus_pwm_period_min,constants::stimulus_pwm_period_max);
 
   // Parameters
