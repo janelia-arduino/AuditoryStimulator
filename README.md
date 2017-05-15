@@ -85,127 +85,379 @@ License:
     "properties":[
       {
         "name":"stimulus0Mode",
-        "type":"string"
+        "type":"string",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus0Polarity",
-        "type":"string"
+        "type":"string",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus0Frequency",
+        "type":"long",
         "units":"Hz",
-        "type":"long"
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus0Duration",
+        "type":"long",
         "units":"ms",
-        "type":"long"
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus0Volume",
-        "type":"double"
+        "type":"double",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus0Bandwidth",
-        "type":"double"
+        "type":"double",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus0PwmPeriod",
+        "type":"long",
         "units":"ms",
-        "type":"long"
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus1Mode",
-        "type":"string"
+        "type":"string",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus1Polarity",
-        "type":"string"
+        "type":"string",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus1Frequency",
+        "type":"long",
         "units":"Hz",
-        "type":"long"
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus1Duration",
+        "type":"long",
         "units":"ms",
-        "type":"long"
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus1Volume",
-        "type":"double"
+        "type":"double",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus1Bandwidth",
-        "type":"double"
+        "type":"double",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus1PwmPeriod",
+        "type":"long",
         "units":"ms",
-        "type":"long"
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus2Mode",
-        "type":"string"
+        "type":"string",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus2Polarity",
-        "type":"string"
+        "type":"string",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus2Frequency",
+        "type":"long",
         "units":"Hz",
-        "type":"long"
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus2Duration",
+        "type":"long",
         "units":"ms",
-        "type":"long"
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus2Volume",
-        "type":"double"
+        "type":"double",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus2Bandwidth",
-        "type":"double"
+        "type":"double",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus2PwmPeriod",
+        "type":"long",
         "units":"ms",
-        "type":"long"
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus3Mode",
-        "type":"string"
+        "type":"string",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus3Polarity",
-        "type":"string"
+        "type":"string",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus3Frequency",
+        "type":"long",
         "units":"Hz",
-        "type":"long"
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus3Duration",
+        "type":"long",
         "units":"ms",
-        "type":"long"
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus3Volume",
-        "type":"double"
+        "type":"double",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus3Bandwidth",
-        "type":"double"
+        "type":"double",
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       },
       {
         "name":"stimulus3PwmPeriod",
+        "type":"long",
         "units":"ms",
-        "type":"long"
+        "functions":[
+          "getValue",
+          "setValue",
+          "getDefaultValue",
+          "setValueToDefault"
+        ],
+        "parameters":[
+          "value"
+        ]
       }
     ],
     "callbacks":[
@@ -219,6 +471,16 @@ License:
           "stimulus0Volume",
           "stimulus0Bandwidth",
           "stimulus0PwmPeriod"
+        ],
+        "functions":[
+          "trigger",
+          "attachTo",
+          "detachFrom",
+          "detachFromAll"
+        ],
+        "parameters":[
+          "interrupt",
+          "mode"
         ]
       },
       {
@@ -231,6 +493,16 @@ License:
           "stimulus1Volume",
           "stimulus1Bandwidth",
           "stimulus1PwmPeriod"
+        ],
+        "functions":[
+          "trigger",
+          "attachTo",
+          "detachFrom",
+          "detachFromAll"
+        ],
+        "parameters":[
+          "interrupt",
+          "mode"
         ]
       },
       {
@@ -243,6 +515,16 @@ License:
           "stimulus2Volume",
           "stimulus2Bandwidth",
           "stimulus2PwmPeriod"
+        ],
+        "functions":[
+          "trigger",
+          "attachTo",
+          "detachFrom",
+          "detachFromAll"
+        ],
+        "parameters":[
+          "interrupt",
+          "mode"
         ]
       },
       {
@@ -255,6 +537,16 @@ License:
           "stimulus3Volume",
           "stimulus3Bandwidth",
           "stimulus3PwmPeriod"
+        ],
+        "functions":[
+          "trigger",
+          "attachTo",
+          "detachFrom",
+          "detachFromAll"
+        ],
+        "parameters":[
+          "interrupt",
+          "mode"
         ]
       }
     ]
