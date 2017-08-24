@@ -156,9 +156,6 @@ void AuditoryStimulator::setup()
   stimulus_0_callback.addProperty(stimulus_0_volume_property);
   stimulus_0_callback.addProperty(stimulus_0_bandwidth_property);
   stimulus_0_callback.addProperty(stimulus_0_pwm_period_property);
-#if defined(__MK20DX256__)
-  stimulus_0_callback.attachTo(audio_controller::constants::int_a_interrupt_name,modular_server::interrupt::mode_change);
-#endif
 
   modular_server::Callback & stimulus_1_callback = modular_server_.createCallback(constants::stimulus_1_callback_name);
   stimulus_1_callback.attachFunctor(makeFunctor((Functor1<modular_server::Interrupt *> *)0,*this,&AuditoryStimulator::stimulus1Handler));
@@ -169,9 +166,6 @@ void AuditoryStimulator::setup()
   stimulus_1_callback.addProperty(stimulus_1_volume_property);
   stimulus_1_callback.addProperty(stimulus_1_bandwidth_property);
   stimulus_1_callback.addProperty(stimulus_1_pwm_period_property);
-#if defined(__MK20DX256__)
-  stimulus_1_callback.attachTo(audio_controller::constants::int_b_interrupt_name,modular_server::interrupt::mode_change);
-#endif
 
   modular_server::Callback & stimulus_2_callback = modular_server_.createCallback(constants::stimulus_2_callback_name);
   stimulus_2_callback.attachFunctor(makeFunctor((Functor1<modular_server::Interrupt *> *)0,*this,&AuditoryStimulator::stimulus2Handler));
@@ -182,9 +176,6 @@ void AuditoryStimulator::setup()
   stimulus_2_callback.addProperty(stimulus_2_volume_property);
   stimulus_2_callback.addProperty(stimulus_2_bandwidth_property);
   stimulus_2_callback.addProperty(stimulus_2_pwm_period_property);
-#if defined(__MK20DX256__)
-  stimulus_2_callback.attachTo(audio_controller::constants::int_c_interrupt_name,modular_server::interrupt::mode_change);
-#endif
 
   modular_server::Callback & stimulus_3_callback = modular_server_.createCallback(constants::stimulus_3_callback_name);
   stimulus_3_callback.attachFunctor(makeFunctor((Functor1<modular_server::Interrupt *> *)0,*this,&AuditoryStimulator::stimulus3Handler));
@@ -195,9 +186,6 @@ void AuditoryStimulator::setup()
   stimulus_3_callback.addProperty(stimulus_3_volume_property);
   stimulus_3_callback.addProperty(stimulus_3_bandwidth_property);
   stimulus_3_callback.addProperty(stimulus_3_pwm_period_property);
-#if defined(__MK20DX256__)
-  stimulus_3_callback.attachTo(audio_controller::constants::int_d_interrupt_name,modular_server::interrupt::mode_change);
-#endif
 
 }
 

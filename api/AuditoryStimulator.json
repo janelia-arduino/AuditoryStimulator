@@ -1,384 +1,1099 @@
 {
-  "id":"getApiVerbose",
+  "id":"getApi",
   "result":{
     "firmware":["AuditoryStimulator"],
-    "functions":[],
-    "parameters":[],
+    "verbosity":"GENERAL",
     "properties":[
       {
         "name":"stimulus0Mode",
         "type":"string",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"string"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"string"
+          }
         ]
       },
       {
         "name":"stimulus0Polarity",
         "type":"string",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"string"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"string"
+          }
         ]
       },
       {
         "name":"stimulus0Frequency",
         "type":"long",
-        "units":"Hz",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"long"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"long"
+          }
         ]
       },
       {
         "name":"stimulus0Duration",
         "type":"long",
-        "units":"ms",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"long"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"long"
+          }
         ]
       },
       {
         "name":"stimulus0Volume",
         "type":"double",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"double"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"double"
+          }
         ]
       },
       {
         "name":"stimulus0Bandwidth",
         "type":"double",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"double"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"double"
+          }
         ]
       },
       {
         "name":"stimulus0PwmPeriod",
         "type":"long",
-        "units":"ms",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"long"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"long"
+          }
         ]
       },
       {
         "name":"stimulus1Mode",
         "type":"string",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"string"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"string"
+          }
         ]
       },
       {
         "name":"stimulus1Polarity",
         "type":"string",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"string"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"string"
+          }
         ]
       },
       {
         "name":"stimulus1Frequency",
         "type":"long",
-        "units":"Hz",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"long"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"long"
+          }
         ]
       },
       {
         "name":"stimulus1Duration",
         "type":"long",
-        "units":"ms",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"long"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"long"
+          }
         ]
       },
       {
         "name":"stimulus1Volume",
         "type":"double",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"double"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"double"
+          }
         ]
       },
       {
         "name":"stimulus1Bandwidth",
         "type":"double",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"double"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"double"
+          }
         ]
       },
       {
         "name":"stimulus1PwmPeriod",
         "type":"long",
-        "units":"ms",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"long"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"long"
+          }
         ]
       },
       {
         "name":"stimulus2Mode",
         "type":"string",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"string"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"string"
+          }
         ]
       },
       {
         "name":"stimulus2Polarity",
         "type":"string",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"string"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"string"
+          }
         ]
       },
       {
         "name":"stimulus2Frequency",
         "type":"long",
-        "units":"Hz",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"long"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"long"
+          }
         ]
       },
       {
         "name":"stimulus2Duration",
         "type":"long",
-        "units":"ms",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"long"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"long"
+          }
         ]
       },
       {
         "name":"stimulus2Volume",
         "type":"double",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"double"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"double"
+          }
         ]
       },
       {
         "name":"stimulus2Bandwidth",
         "type":"double",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"double"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"double"
+          }
         ]
       },
       {
         "name":"stimulus2PwmPeriod",
         "type":"long",
-        "units":"ms",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"long"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"long"
+          }
         ]
       },
       {
         "name":"stimulus3Mode",
         "type":"string",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"string"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"string"
+          }
         ]
       },
       {
         "name":"stimulus3Polarity",
         "type":"string",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"string"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"string"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"string"
+          }
         ]
       },
       {
         "name":"stimulus3Frequency",
         "type":"long",
-        "units":"Hz",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"long"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"long"
+          }
         ]
       },
       {
         "name":"stimulus3Duration",
         "type":"long",
-        "units":"ms",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"long"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"long"
+          }
         ]
       },
       {
         "name":"stimulus3Volume",
         "type":"double",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"double"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"double"
+          }
         ]
       },
       {
         "name":"stimulus3Bandwidth",
         "type":"double",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"double"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"double"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"double"
+          }
         ]
       },
       {
         "name":"stimulus3PwmPeriod",
         "type":"long",
-        "units":"ms",
         "functions":[
-          "getValue",
-          "setValue",
-          "getDefaultValue",
-          "setValueToDefault"
+          {
+            "name":"getValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValue",
+            "parameters":[
+              "value"
+            ],
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"getDefaultValue",
+            "result_info":{
+              "type":"long"
+            }
+          },
+          {
+            "name":"setValueToDefault",
+            "result_info":{
+              "type":"long"
+            }
+          }
         ],
         "parameters":[
-          "value"
+          {
+            "name":"value",
+            "type":"long"
+          }
         ]
       }
     ],
@@ -395,14 +1110,35 @@
           "stimulus0PwmPeriod"
         ],
         "functions":[
-          "trigger",
-          "attachTo",
-          "detachFrom",
-          "detachFromAll"
+          {
+            "name":"trigger"
+          },
+          {
+            "name":"attachTo",
+            "parameters":[
+              "interrupt",
+              "mode"
+            ]
+          },
+          {
+            "name":"detachFrom",
+            "parameters":[
+              "interrupt"
+            ]
+          },
+          {
+            "name":"detachFromAll"
+          }
         ],
         "parameters":[
-          "interrupt",
-          "mode"
+          {
+            "name":"interrupt",
+            "type":"string"
+          },
+          {
+            "name":"mode",
+            "type":"string"
+          }
         ]
       },
       {
@@ -417,14 +1153,35 @@
           "stimulus1PwmPeriod"
         ],
         "functions":[
-          "trigger",
-          "attachTo",
-          "detachFrom",
-          "detachFromAll"
+          {
+            "name":"trigger"
+          },
+          {
+            "name":"attachTo",
+            "parameters":[
+              "interrupt",
+              "mode"
+            ]
+          },
+          {
+            "name":"detachFrom",
+            "parameters":[
+              "interrupt"
+            ]
+          },
+          {
+            "name":"detachFromAll"
+          }
         ],
         "parameters":[
-          "interrupt",
-          "mode"
+          {
+            "name":"interrupt",
+            "type":"string"
+          },
+          {
+            "name":"mode",
+            "type":"string"
+          }
         ]
       },
       {
@@ -439,14 +1196,35 @@
           "stimulus2PwmPeriod"
         ],
         "functions":[
-          "trigger",
-          "attachTo",
-          "detachFrom",
-          "detachFromAll"
+          {
+            "name":"trigger"
+          },
+          {
+            "name":"attachTo",
+            "parameters":[
+              "interrupt",
+              "mode"
+            ]
+          },
+          {
+            "name":"detachFrom",
+            "parameters":[
+              "interrupt"
+            ]
+          },
+          {
+            "name":"detachFromAll"
+          }
         ],
         "parameters":[
-          "interrupt",
-          "mode"
+          {
+            "name":"interrupt",
+            "type":"string"
+          },
+          {
+            "name":"mode",
+            "type":"string"
+          }
         ]
       },
       {
@@ -461,14 +1239,35 @@
           "stimulus3PwmPeriod"
         ],
         "functions":[
-          "trigger",
-          "attachTo",
-          "detachFrom",
-          "detachFromAll"
+          {
+            "name":"trigger"
+          },
+          {
+            "name":"attachTo",
+            "parameters":[
+              "interrupt",
+              "mode"
+            ]
+          },
+          {
+            "name":"detachFrom",
+            "parameters":[
+              "interrupt"
+            ]
+          },
+          {
+            "name":"detachFromAll"
+          }
         ],
         "parameters":[
-          "interrupt",
-          "mode"
+          {
+            "name":"interrupt",
+            "type":"string"
+          },
+          {
+            "name":"mode",
+            "type":"string"
+          }
         ]
       }
     ]

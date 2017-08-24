@@ -24,15 +24,14 @@ License:
 
 [audio_controller](https://github.com/janelia-modular-devices/audio_controller.git)
 
-## API
+## API NAMES
 
 ```json
 {
   "id":"getApi",
   "result":{
     "firmware":["AuditoryStimulator"],
-    "functions":[],
-    "parameters":[],
+    "verbosity":"NAMES",
     "properties":[
       "stimulus0Mode",
       "stimulus0Polarity",
@@ -73,9 +72,9 @@ License:
 }
 ```
 
-## API Verbose
+## API GENERAL
 
-[API Verbose](./api/)
+[API GENERAL](./api/)
 
 ## More Detailed Modular Device Information
 
