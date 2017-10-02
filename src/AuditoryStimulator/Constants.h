@@ -7,8 +7,8 @@
 // ----------------------------------------------------------------------------
 #ifndef AUDITORY_STIMULATOR_CONSTANTS_H
 #define AUDITORY_STIMULATOR_CONSTANTS_H
-#include "ConstantVariable.h"
-#include "AudioController.h"
+#include <ConstantVariable.h>
+#include <AudioController.h>
 
 
 namespace auditory_stimulator

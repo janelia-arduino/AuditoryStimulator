@@ -5,7 +5,7 @@
 // Authors:
 // Peter Polidoro polidorop@janelia.hhmi.org
 // ----------------------------------------------------------------------------
-#include "AuditoryStimulator.h"
+#include "../AuditoryStimulator.h"
 
 
 using namespace auditory_stimulator;
