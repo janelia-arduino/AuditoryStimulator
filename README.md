@@ -28,11 +28,13 @@ License:
 
 ```json
 {
-  "id":"getApi",
-  "result":{
-    "firmware":["AuditoryStimulator"],
-    "verbosity":"NAMES",
-    "properties":[
+  "id": "getApi",
+  "result": {
+    "firmware": [
+      "AuditoryStimulator"
+    ],
+    "verbosity": "NAMES",
+    "properties": [
       "stimulus0Mode",
       "stimulus0Polarity",
       "stimulus0Frequency",
@@ -62,7 +64,7 @@ License:
       "stimulus3Bandwidth",
       "stimulus3PwmPeriod"
     ],
-    "callbacks":[
+    "callbacks": [
       "stimulus0",
       "stimulus1",
       "stimulus2",
