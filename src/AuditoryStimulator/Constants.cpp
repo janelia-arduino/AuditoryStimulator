@@ -21,7 +21,7 @@ const modular_server::FirmwareInfo firmware_info =
     .name_ptr=&firmware_name,
     .version_major=1,
     .version_minor=0,
-    .version_patch=2,
+    .version_patch=3,
   };
 
 const long stimulus_delay = 10;

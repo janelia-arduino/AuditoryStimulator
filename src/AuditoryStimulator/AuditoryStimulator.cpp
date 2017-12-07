@@ -19,6 +19,9 @@ void AuditoryStimulator::setup()
   // Parent Setup
   AudioController::setup();
 
+  // Reset Watchdog
+  resetWatchdog();
+
   // Variable Setup
   stimulus_0_playing_ = false;
   stimulus_1_playing_ = false;
