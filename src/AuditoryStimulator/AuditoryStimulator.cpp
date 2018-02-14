@@ -36,6 +36,15 @@ void AuditoryStimulator::setup()
   // Add Hardware
 
   // Interrupts
+  modular_server::Interrupt & bnc_a_interrupt = modular_server_.interrupt(modular_device_base::constants::bnc_a_interrupt_name);
+
+  modular_server::Interrupt & bnc_b_interrupt = modular_server_.interrupt(modular_device_base::constants::bnc_b_interrupt_name);
+
+  modular_server::Interrupt & bnc_c_interrupt = modular_server_.createInterrupt(constants::bnc_c_interrupt_name,
+                                                                                constants::bnc_c_pin);
+
+  modular_server::Interrupt & bnc_d_interrupt = modular_server_.createInterrupt(constants::bnc_d_interrupt_name,
+                                                                                constants::bnc_d_pin);
 
   // Add Firmware
   modular_server_.addFirmware(constants::firmware_info,
@@ -45,6 +54,9 @@ void AuditoryStimulator::setup()
                               callbacks_);
 
   // Properties
+  modular_server::Property & volume_property = modular_server_.property(audio_controller::constants::volume_property_name);
+  volume_property.setDefaultValue(constants::volume_default);
+
   // stimulus_0
   modular_server::Property & stimulus_0_mode_property = modular_server_.createProperty(constants::stimulus_0_mode_property_name,constants::stimulus_0_mode_ptr_default);
   stimulus_0_mode_property.setSubset(constants::stimulus_mode_ptr_subset);
@@ -159,6 +171,7 @@ void AuditoryStimulator::setup()
   stimulus_0_callback.addProperty(stimulus_0_volume_property);
   stimulus_0_callback.addProperty(stimulus_0_bandwidth_property);
   stimulus_0_callback.addProperty(stimulus_0_pwm_period_property);
+  stimulus_0_callback.attachTo(bnc_a_interrupt,modular_server::interrupt::mode_change);
 
   modular_server::Callback & stimulus_1_callback = modular_server_.createCallback(constants::stimulus_1_callback_name);
   stimulus_1_callback.attachFunctor(makeFunctor((Functor1<modular_server::Interrupt *> *)0,*this,&AuditoryStimulator::stimulus1Handler));
@@ -169,6 +182,7 @@ void AuditoryStimulator::setup()
   stimulus_1_callback.addProperty(stimulus_1_volume_property);
   stimulus_1_callback.addProperty(stimulus_1_bandwidth_property);
   stimulus_1_callback.addProperty(stimulus_1_pwm_period_property);
+  stimulus_1_callback.attachTo(bnc_b_interrupt,modular_server::interrupt::mode_change);
 
   modular_server::Callback & stimulus_2_callback = modular_server_.createCallback(constants::stimulus_2_callback_name);
   stimulus_2_callback.attachFunctor(makeFunctor((Functor1<modular_server::Interrupt *> *)0,*this,&AuditoryStimulator::stimulus2Handler));
@@ -179,6 +193,7 @@ void AuditoryStimulator::setup()
   stimulus_2_callback.addProperty(stimulus_2_volume_property);
   stimulus_2_callback.addProperty(stimulus_2_bandwidth_property);
   stimulus_2_callback.addProperty(stimulus_2_pwm_period_property);
+  stimulus_2_callback.attachTo(bnc_c_interrupt,modular_server::interrupt::mode_change);
 
   modular_server::Callback & stimulus_3_callback = modular_server_.createCallback(constants::stimulus_3_callback_name);
   stimulus_3_callback.attachFunctor(makeFunctor((Functor1<modular_server::Interrupt *> *)0,*this,&AuditoryStimulator::stimulus3Handler));
@@ -189,6 +204,7 @@ void AuditoryStimulator::setup()
   stimulus_3_callback.addProperty(stimulus_3_volume_property);
   stimulus_3_callback.addProperty(stimulus_3_bandwidth_property);
   stimulus_3_callback.addProperty(stimulus_3_pwm_period_property);
+  stimulus_3_callback.attachTo(bnc_d_interrupt,modular_server::interrupt::mode_change);
 
 }
 
@@ -202,7 +218,7 @@ void AuditoryStimulator::stimulus(bool play,
                                   const ConstantString * mode_ptr,
                                   long frequency,
                                   long duration,
-                                  double volume,
+                                  long volume,
                                   double bandwidth,
                                   long pwm_period)
 {
@@ -376,7 +392,7 @@ void AuditoryStimulator::stimulus0Handler(modular_server::Interrupt * interrupt_
   modular_server_.property(constants::stimulus_0_frequency_property_name).getValue(frequency);
   long duration;
   modular_server_.property(constants::stimulus_0_duration_property_name).getValue(duration);
-  double volume;
+  long volume;
   modular_server_.property(constants::stimulus_0_volume_property_name).getValue(volume);
   double bandwidth;
   modular_server_.property(constants::stimulus_0_bandwidth_property_name).getValue(bandwidth);
@@ -420,7 +436,7 @@ void AuditoryStimulator::stimulus1Handler(modular_server::Interrupt * interrupt_
   modular_server_.property(constants::stimulus_1_frequency_property_name).getValue(frequency);
   long duration;
   modular_server_.property(constants::stimulus_1_duration_property_name).getValue(duration);
-  double volume;
+  long volume;
   modular_server_.property(constants::stimulus_1_volume_property_name).getValue(volume);
   double bandwidth;
   modular_server_.property(constants::stimulus_1_bandwidth_property_name).getValue(bandwidth);
@@ -464,7 +480,7 @@ void AuditoryStimulator::stimulus2Handler(modular_server::Interrupt * interrupt_
   modular_server_.property(constants::stimulus_2_frequency_property_name).getValue(frequency);
   long duration;
   modular_server_.property(constants::stimulus_2_duration_property_name).getValue(duration);
-  double volume;
+  long volume;
   modular_server_.property(constants::stimulus_2_volume_property_name).getValue(volume);
   double bandwidth;
   modular_server_.property(constants::stimulus_2_bandwidth_property_name).getValue(bandwidth);
@@ -508,7 +524,7 @@ void AuditoryStimulator::stimulus3Handler(modular_server::Interrupt * interrupt_
   modular_server_.property(constants::stimulus_3_frequency_property_name).getValue(frequency);
   long duration;
   modular_server_.property(constants::stimulus_3_duration_property_name).getValue(duration);
-  double volume;
+  long volume;
   modular_server_.property(constants::stimulus_3_volume_property_name).getValue(volume);
   double bandwidth;
   modular_server_.property(constants::stimulus_3_bandwidth_property_name).getValue(bandwidth);

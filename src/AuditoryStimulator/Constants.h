@@ -29,11 +29,18 @@ extern const modular_server::FirmwareInfo firmware_info;
 extern const long stimulus_delay;
 
 // Interrupts
+extern ConstantString bnc_c_interrupt_name;
+extern const size_t bnc_c_pin;
+
+extern ConstantString bnc_d_interrupt_name;
+extern const size_t bnc_d_pin;
 
 // Units
 
 // Properties
 // Property values must be long, double, bool, long[], double[], bool[], char[], ConstantString *, (ConstantString *)[]
+extern const long volume_default;
+
 // stimulus_0
 extern ConstantString stimulus_0_mode_property_name;
 enum{STIMULUS_MODE_SUBSET_LENGTH=6};
@@ -64,9 +71,9 @@ extern const long stimulus_duration_max;
 extern const long stimulus_0_duration_default;
 
 extern ConstantString stimulus_0_volume_property_name;
-extern const double stimulus_volume_min;
-extern const double stimulus_volume_max;
-extern const double stimulus_0_volume_default;
+extern const long stimulus_volume_min;
+extern const long stimulus_volume_max;
+extern const long stimulus_0_volume_default;
 
 extern ConstantString stimulus_0_bandwidth_property_name;
 extern const double stimulus_bandwidth_min;
@@ -92,7 +99,7 @@ extern ConstantString stimulus_1_duration_property_name;
 extern const long stimulus_1_duration_default;
 
 extern ConstantString stimulus_1_volume_property_name;
-extern const double stimulus_1_volume_default;
+extern const long stimulus_1_volume_default;
 
 extern ConstantString stimulus_1_bandwidth_property_name;
 extern const double stimulus_1_bandwidth_default;
@@ -114,7 +121,7 @@ extern ConstantString stimulus_2_duration_property_name;
 extern const long stimulus_2_duration_default;
 
 extern ConstantString stimulus_2_volume_property_name;
-extern const double stimulus_2_volume_default;
+extern const long stimulus_2_volume_default;
 
 extern ConstantString stimulus_2_bandwidth_property_name;
 extern const double stimulus_2_bandwidth_default;
@@ -136,7 +143,7 @@ extern ConstantString stimulus_3_duration_property_name;
 extern const long stimulus_3_duration_default;
 
 extern ConstantString stimulus_3_volume_property_name;
-extern const double stimulus_3_volume_default;
+extern const long stimulus_3_volume_default;
 
 extern ConstantString stimulus_3_bandwidth_property_name;
 extern const double stimulus_3_bandwidth_default;

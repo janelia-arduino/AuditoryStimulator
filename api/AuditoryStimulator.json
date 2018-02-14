@@ -164,12 +164,12 @@
       },
       {
         "name": "stimulus0Volume",
-        "type": "double",
+        "type": "long",
         "functions": [
           {
             "name": "getValue",
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           },
           {
@@ -178,26 +178,26 @@
               "value"
             ],
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           },
           {
             "name": "getDefaultValue",
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           },
           {
             "name": "setValueToDefault",
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           }
         ],
         "parameters": [
           {
             "name": "value",
-            "type": "double"
+            "type": "long"
           }
         ]
       },
@@ -437,12 +437,12 @@
       },
       {
         "name": "stimulus1Volume",
-        "type": "double",
+        "type": "long",
         "functions": [
           {
             "name": "getValue",
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           },
           {
@@ -451,26 +451,26 @@
               "value"
             ],
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           },
           {
             "name": "getDefaultValue",
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           },
           {
             "name": "setValueToDefault",
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           }
         ],
         "parameters": [
           {
             "name": "value",
-            "type": "double"
+            "type": "long"
           }
         ]
       },
@@ -710,12 +710,12 @@
       },
       {
         "name": "stimulus2Volume",
-        "type": "double",
+        "type": "long",
         "functions": [
           {
             "name": "getValue",
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           },
           {
@@ -724,26 +724,26 @@
               "value"
             ],
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           },
           {
             "name": "getDefaultValue",
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           },
           {
             "name": "setValueToDefault",
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           }
         ],
         "parameters": [
           {
             "name": "value",
-            "type": "double"
+            "type": "long"
           }
         ]
       },
@@ -983,12 +983,12 @@
       },
       {
         "name": "stimulus3Volume",
-        "type": "double",
+        "type": "long",
         "functions": [
           {
             "name": "getValue",
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           },
           {
@@ -997,26 +997,26 @@
               "value"
             ],
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           },
           {
             "name": "getDefaultValue",
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           },
           {
             "name": "setValueToDefault",
             "result_info": {
-              "type": "double"
+              "type": "long"
             }
           }
         ],
         "parameters": [
           {
             "name": "value",
-            "type": "double"
+            "type": "long"
           }
         ]
       },

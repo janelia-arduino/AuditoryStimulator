@@ -45,7 +45,7 @@ public:
                 const ConstantString * mode_ptr,
                 long frequency,
                 long duration,
-                double volume,
+                long volume,
                 double bandwidth,
                 long pwm_period);
 
