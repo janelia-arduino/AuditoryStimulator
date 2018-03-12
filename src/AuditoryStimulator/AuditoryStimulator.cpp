@@ -215,7 +215,7 @@ void AuditoryStimulator::update()
 }
 
 void AuditoryStimulator::stimulus(bool play,
-                                  const ConstantString * mode_ptr,
+                                  const ConstantString * const mode_ptr,
                                   long frequency,
                                   long duration,
                                   long volume,
