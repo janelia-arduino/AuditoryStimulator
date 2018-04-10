@@ -30,10 +30,10 @@ extern const long stimulus_delay;
 
 // Pins
 extern ConstantString bnc_c_pin_name;
-extern const size_t bnc_c_pin;
+extern const size_t bnc_c_pin_number;
 
 extern ConstantString bnc_d_pin_name;
-extern const size_t bnc_d_pin;
+extern const size_t bnc_d_pin_number;
 
 // Units
 
