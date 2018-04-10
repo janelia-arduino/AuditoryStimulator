@@ -16,7 +16,7 @@ namespace auditory_stimulator
 {
 namespace constants
 {
-// Interrupts
+// Pins
 
 // Units
 

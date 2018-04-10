@@ -51,10 +51,10 @@ private:
   volatile bool stimulus_3_playing_;
 
   // Handlers
-  void stimulus0Handler(modular_server::Interrupt * interrupt_ptr);
-  void stimulus1Handler(modular_server::Interrupt * interrupt_ptr);
-  void stimulus2Handler(modular_server::Interrupt * interrupt_ptr);
-  void stimulus3Handler(modular_server::Interrupt * interrupt_ptr);
+  void stimulus0Handler(modular_server::Pin * pin_ptr);
+  void stimulus1Handler(modular_server::Pin * pin_ptr);
+  void stimulus2Handler(modular_server::Pin * pin_ptr);
+  void stimulus3Handler(modular_server::Pin * pin_ptr);
 
 };
 

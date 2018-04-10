@@ -28,11 +28,11 @@ extern const modular_server::FirmwareInfo firmware_info;
 
 extern const long stimulus_delay;
 
-// Interrupts
-extern ConstantString bnc_c_interrupt_name;
+// Pins
+extern ConstantString bnc_c_pin_name;
 extern const size_t bnc_c_pin;
 
-extern ConstantString bnc_d_interrupt_name;
+extern ConstantString bnc_d_pin_name;
 extern const size_t bnc_d_pin;
 
 // Units

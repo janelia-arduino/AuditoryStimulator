@@ -26,10 +26,10 @@ const modular_server::FirmwareInfo firmware_info =
 
 const long stimulus_delay = 10;
 
-// Interrupts
-CONSTANT_STRING(bnc_c_interrupt_name,"bnc_c");
+// Pins
+CONSTANT_STRING(bnc_c_pin_name,"bnc_c");
 
-CONSTANT_STRING(bnc_d_interrupt_name,"bnc_d");
+CONSTANT_STRING(bnc_d_pin_name,"bnc_d");
 
 // Units
 

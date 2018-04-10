@@ -35,16 +35,16 @@ void AuditoryStimulator::setup()
 
   // Add Hardware
 
-  // Interrupts
-  modular_server::Interrupt & bnc_a_interrupt = modular_server_.interrupt(modular_device_base::constants::bnc_a_interrupt_name);
+  // Pins
+  modular_server::Pin & bnc_a_pin = modular_server_.pin(modular_device_base::constants::bnc_a_pin_name);
 
-  modular_server::Interrupt & bnc_b_interrupt = modular_server_.interrupt(modular_device_base::constants::bnc_b_interrupt_name);
+  modular_server::Pin & bnc_b_pin = modular_server_.pin(modular_device_base::constants::bnc_b_pin_name);
 
-  modular_server::Interrupt & bnc_c_interrupt = modular_server_.createInterrupt(constants::bnc_c_interrupt_name,
-                                                                                constants::bnc_c_pin);
+  modular_server::Pin & bnc_c_pin = modular_server_.createPin(constants::bnc_c_pin_name,
+                                                              constants::bnc_c_pin);
 
-  modular_server::Interrupt & bnc_d_interrupt = modular_server_.createInterrupt(constants::bnc_d_interrupt_name,
-                                                                                constants::bnc_d_pin);
+  modular_server::Pin & bnc_d_pin = modular_server_.createPin(constants::bnc_d_pin_name,
+                                                              constants::bnc_d_pin);
 
   // Add Firmware
   modular_server_.addFirmware(constants::firmware_info,
@@ -163,7 +163,7 @@ void AuditoryStimulator::setup()
 
   // Callbacks
   modular_server::Callback & stimulus_0_callback = modular_server_.createCallback(constants::stimulus_0_callback_name);
-  stimulus_0_callback.attachFunctor(makeFunctor((Functor1<modular_server::Interrupt *> *)0,*this,&AuditoryStimulator::stimulus0Handler));
+  stimulus_0_callback.attachFunctor(makeFunctor((Functor1<modular_server::Pin *> *)0,*this,&AuditoryStimulator::stimulus0Handler));
   stimulus_0_callback.addProperty(stimulus_0_mode_property);
   stimulus_0_callback.addProperty(stimulus_0_polarity_property);
   stimulus_0_callback.addProperty(stimulus_0_frequency_property);
@@ -171,10 +171,10 @@ void AuditoryStimulator::setup()
   stimulus_0_callback.addProperty(stimulus_0_volume_property);
   stimulus_0_callback.addProperty(stimulus_0_bandwidth_property);
   stimulus_0_callback.addProperty(stimulus_0_pwm_period_property);
-  stimulus_0_callback.attachTo(bnc_a_interrupt,modular_server::interrupt::mode_change);
+  stimulus_0_callback.attachTo(bnc_a_pin,modular_server::pin::mode_change);
 
   modular_server::Callback & stimulus_1_callback = modular_server_.createCallback(constants::stimulus_1_callback_name);
-  stimulus_1_callback.attachFunctor(makeFunctor((Functor1<modular_server::Interrupt *> *)0,*this,&AuditoryStimulator::stimulus1Handler));
+  stimulus_1_callback.attachFunctor(makeFunctor((Functor1<modular_server::Pin *> *)0,*this,&AuditoryStimulator::stimulus1Handler));
   stimulus_1_callback.addProperty(stimulus_1_mode_property);
   stimulus_1_callback.addProperty(stimulus_1_polarity_property);
   stimulus_1_callback.addProperty(stimulus_1_frequency_property);
@@ -182,10 +182,10 @@ void AuditoryStimulator::setup()
   stimulus_1_callback.addProperty(stimulus_1_volume_property);
   stimulus_1_callback.addProperty(stimulus_1_bandwidth_property);
   stimulus_1_callback.addProperty(stimulus_1_pwm_period_property);
-  stimulus_1_callback.attachTo(bnc_b_interrupt,modular_server::interrupt::mode_change);
+  stimulus_1_callback.attachTo(bnc_b_pin,modular_server::pin::mode_change);
 
   modular_server::Callback & stimulus_2_callback = modular_server_.createCallback(constants::stimulus_2_callback_name);
-  stimulus_2_callback.attachFunctor(makeFunctor((Functor1<modular_server::Interrupt *> *)0,*this,&AuditoryStimulator::stimulus2Handler));
+  stimulus_2_callback.attachFunctor(makeFunctor((Functor1<modular_server::Pin *> *)0,*this,&AuditoryStimulator::stimulus2Handler));
   stimulus_2_callback.addProperty(stimulus_2_mode_property);
   stimulus_2_callback.addProperty(stimulus_2_polarity_property);
   stimulus_2_callback.addProperty(stimulus_2_frequency_property);
@@ -193,10 +193,10 @@ void AuditoryStimulator::setup()
   stimulus_2_callback.addProperty(stimulus_2_volume_property);
   stimulus_2_callback.addProperty(stimulus_2_bandwidth_property);
   stimulus_2_callback.addProperty(stimulus_2_pwm_period_property);
-  stimulus_2_callback.attachTo(bnc_c_interrupt,modular_server::interrupt::mode_change);
+  stimulus_2_callback.attachTo(bnc_c_pin,modular_server::pin::mode_change);
 
   modular_server::Callback & stimulus_3_callback = modular_server_.createCallback(constants::stimulus_3_callback_name);
-  stimulus_3_callback.attachFunctor(makeFunctor((Functor1<modular_server::Interrupt *> *)0,*this,&AuditoryStimulator::stimulus3Handler));
+  stimulus_3_callback.attachFunctor(makeFunctor((Functor1<modular_server::Pin *> *)0,*this,&AuditoryStimulator::stimulus3Handler));
   stimulus_3_callback.addProperty(stimulus_3_mode_property);
   stimulus_3_callback.addProperty(stimulus_3_polarity_property);
   stimulus_3_callback.addProperty(stimulus_3_frequency_property);
@@ -204,7 +204,7 @@ void AuditoryStimulator::setup()
   stimulus_3_callback.addProperty(stimulus_3_volume_property);
   stimulus_3_callback.addProperty(stimulus_3_bandwidth_property);
   stimulus_3_callback.addProperty(stimulus_3_pwm_period_property);
-  stimulus_3_callback.attachTo(bnc_d_interrupt,modular_server::interrupt::mode_change);
+  stimulus_3_callback.attachTo(bnc_d_pin,modular_server::pin::mode_change);
 
 }
 
@@ -383,7 +383,7 @@ void AuditoryStimulator::stopPwmHandler(int index)
   stimulus_3_playing_ = false;
 }
 
-void AuditoryStimulator::stimulus0Handler(modular_server::Interrupt * interrupt_ptr)
+void AuditoryStimulator::stimulus0Handler(modular_server::Pin * pin_ptr)
 {
   const ConstantString * stimulus_mode_ptr;
   modular_server_.property(constants::stimulus_0_mode_property_name).getValue(stimulus_mode_ptr);
@@ -400,9 +400,9 @@ void AuditoryStimulator::stimulus0Handler(modular_server::Interrupt * interrupt_
   long pwm_period;
   modular_server_.property(constants::stimulus_0_pwm_period_property_name).getValue(pwm_period);
   bool play = false;
-  if (interrupt_ptr)
+  if (pin_ptr)
   {
-    int pin_value = digitalRead(interrupt_ptr->getPin());
+    int pin_value = digitalRead(pin_ptr->getPin());
     if (((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high)) ||
         ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
     {
@@ -427,7 +427,7 @@ void AuditoryStimulator::stimulus0Handler(modular_server::Interrupt * interrupt_
   stimulus_0_playing_ = play;
 }
 
-void AuditoryStimulator::stimulus1Handler(modular_server::Interrupt * interrupt_ptr)
+void AuditoryStimulator::stimulus1Handler(modular_server::Pin * pin_ptr)
 {
   const ConstantString * stimulus_mode_ptr;
   modular_server_.property(constants::stimulus_1_mode_property_name).getValue(stimulus_mode_ptr);
@@ -444,9 +444,9 @@ void AuditoryStimulator::stimulus1Handler(modular_server::Interrupt * interrupt_
   long pwm_period;
   modular_server_.property(constants::stimulus_1_pwm_period_property_name).getValue(pwm_period);
   bool play = false;
-  if (interrupt_ptr)
+  if (pin_ptr)
   {
-    int pin_value = digitalRead(interrupt_ptr->getPin());
+    int pin_value = digitalRead(pin_ptr->getPin());
     if (((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high)) ||
         ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
     {
@@ -471,7 +471,7 @@ void AuditoryStimulator::stimulus1Handler(modular_server::Interrupt * interrupt_
   stimulus_1_playing_ = play;
 }
 
-void AuditoryStimulator::stimulus2Handler(modular_server::Interrupt * interrupt_ptr)
+void AuditoryStimulator::stimulus2Handler(modular_server::Pin * pin_ptr)
 {
   const ConstantString * stimulus_mode_ptr;
   modular_server_.property(constants::stimulus_2_mode_property_name).getValue(stimulus_mode_ptr);
@@ -488,9 +488,9 @@ void AuditoryStimulator::stimulus2Handler(modular_server::Interrupt * interrupt_
   long pwm_period;
   modular_server_.property(constants::stimulus_2_pwm_period_property_name).getValue(pwm_period);
   bool play = false;
-  if (interrupt_ptr)
+  if (pin_ptr)
   {
-    int pin_value = digitalRead(interrupt_ptr->getPin());
+    int pin_value = digitalRead(pin_ptr->getPin());
     if (((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high)) ||
         ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
     {
@@ -515,7 +515,7 @@ void AuditoryStimulator::stimulus2Handler(modular_server::Interrupt * interrupt_
   stimulus_2_playing_ = play;
 }
 
-void AuditoryStimulator::stimulus3Handler(modular_server::Interrupt * interrupt_ptr)
+void AuditoryStimulator::stimulus3Handler(modular_server::Pin * pin_ptr)
 {
   const ConstantString * stimulus_mode_ptr;
   modular_server_.property(constants::stimulus_3_mode_property_name).getValue(stimulus_mode_ptr);
@@ -532,9 +532,9 @@ void AuditoryStimulator::stimulus3Handler(modular_server::Interrupt * interrupt_
   long pwm_period;
   modular_server_.property(constants::stimulus_3_pwm_period_property_name).getValue(pwm_period);
   bool play = false;
-  if (interrupt_ptr)
+  if (pin_ptr)
   {
-    int pin_value = digitalRead(interrupt_ptr->getPin());
+    int pin_value = digitalRead(pin_ptr->getPin());
     if (((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high)) ||
         ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
     {

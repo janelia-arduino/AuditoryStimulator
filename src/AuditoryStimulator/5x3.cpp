@@ -14,7 +14,7 @@ namespace auditory_stimulator
 {
 namespace constants
 {
-// Interrupts
+// Pins
 const size_t bnc_c_pin = 2;
 
 const size_t bnc_d_pin = 4;
