@@ -1,32 +1,30 @@
-# AuditoryStimulator
+#+TITLE: AuditoryStimulator
+#+AUTHOR: Peter Polidoro
+#+EMAIL: peterpolidoro@gmail.com
 
-Authors:
+* Library Information
+  - Author :: Peter Polidoro
+  - License :: BSD
 
-    Peter Polidoro <polidorop@janelia.hhmi.org>
+* Ancestors
 
-License:
+  [[https://github.com/janelia-arduino/ModularServer][ModularServer]]
 
-    BSD
+  [[https://github.com/janelia-arduino/ModularDeviceBase][ModularDeviceBase]]
 
-## Ancestors
+  [[https://github.com/janelia-arduino/AudioController][AudioController]]
 
-[ModularServer](https://github.com/janelia-arduino/ModularServer)
+* Clients
 
-[ModularDeviceBase](https://github.com/janelia-arduino/ModularDeviceBase)
+* Devices
 
-[AudioController](https://github.com/janelia-arduino/AudioController)
+  [[https://github.com/janelia-modular-devices/modular_device_base.git][modular_device_base]]
 
-## Clients
+  [[https://github.com/janelia-modular-devices/audio_controller.git][audio_controller]]
 
-## Devices
+* API NAMES
 
-[modular_device_base](https://github.com/janelia-modular-devices/modular_device_base.git)
-
-[audio_controller](https://github.com/janelia-modular-devices/audio_controller.git)
-
-## API NAMES
-
-```json
+  #+BEGIN_SRC js
 {
   "id": "getApi",
   "result": {
@@ -72,16 +70,16 @@ License:
     ]
   }
 }
-```
+  #+END_SRC
 
-## API GENERAL
+* API GENERAL
 
-[API GENERAL](./api/)
+  [[./api/][API GENERAL]]
 
-## More Detailed Modular Device Information
+* More Detailed Modular Device Information
 
-[modular-devices](https://github.com/janelia-modular-devices/modular-devices)
+  [[https://github.com/janelia-modular-devices/modular-devices][modular-devices]]
 
-## Install Library Dependencies
+* Library Dependencies
 
-[arduino-libraries](https://github.com/janelia-arduino/arduino-libraries)
+  [[https://github.com/janelia-arduino/arduino-libraries][arduino-libraries]]
