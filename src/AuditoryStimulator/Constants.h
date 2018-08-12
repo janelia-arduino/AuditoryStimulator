@@ -3,7 +3,7 @@
 //
 //
 // Authors:
-// Peter Polidoro polidorop@janelia.hhmi.org
+// Peter Polidoro peterpolidoro@gmail.com
 // ----------------------------------------------------------------------------
 #ifndef AUDITORY_STIMULATOR_CONSTANTS_H
 #define AUDITORY_STIMULATOR_CONSTANTS_H
