@@ -29,12 +29,12 @@ public:
   virtual void update();
 
   void stimulus(bool play,
-                const ConstantString * const mode_ptr,
-                long frequency,
-                long duration,
-                long volume,
-                double bandwidth,
-                long pwm_period);
+    const ConstantString * const mode_ptr,
+    long frequency,
+    long duration,
+    long volume,
+    double bandwidth,
+    long pwm_period);
 
   // Handlers
   virtual void stopPwmHandler(int index);

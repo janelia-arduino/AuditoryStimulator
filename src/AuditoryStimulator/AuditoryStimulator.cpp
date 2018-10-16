@@ -39,17 +39,17 @@ void AuditoryStimulator::setup()
   modular_server::Pin & bnc_b_pin = modular_server_.pin(modular_device_base::constants::bnc_b_pin_name);
 
   modular_server::Pin & bnc_c_pin = modular_server_.createPin(constants::bnc_c_pin_name,
-                                                              constants::bnc_c_pin_number);
+    constants::bnc_c_pin_number);
 
   modular_server::Pin & bnc_d_pin = modular_server_.createPin(constants::bnc_d_pin_name,
-                                                              constants::bnc_d_pin_number);
+    constants::bnc_d_pin_number);
 
   // Add Firmware
   modular_server_.addFirmware(constants::firmware_info,
-                              properties_,
-                              parameters_,
-                              functions_,
-                              callbacks_);
+    properties_,
+    parameters_,
+    functions_,
+    callbacks_);
 
   // Properties
   modular_server::Property & volume_property = modular_server_.property(audio_controller::constants::volume_property_name);
@@ -213,12 +213,12 @@ void AuditoryStimulator::update()
 }
 
 void AuditoryStimulator::stimulus(bool play,
-                                  const ConstantString * const mode_ptr,
-                                  long frequency,
-                                  long duration,
-                                  long volume,
-                                  double bandwidth,
-                                  long pwm_period)
+  const ConstantString * const mode_ptr,
+  long frequency,
+  long duration,
+  long volume,
+  double bandwidth,
+  long pwm_period)
 {
   stimulus_0_playing_ = false;
   stimulus_1_playing_ = false;
@@ -233,18 +233,18 @@ void AuditoryStimulator::stimulus(bool play,
       if (duration <= 0)
       {
         playToneAt(frequency,
-                   &audio_controller::constants::speaker_all,
-                   volume);
+          &audio_controller::constants::speaker_all,
+          volume);
       }
       else
       {
         addTonePwmAt(frequency,
-                     &audio_controller::constants::speaker_all,
-                     volume,
-                     constants::stimulus_delay,
-                     duration*2,
-                     duration,
-                     1);
+          &audio_controller::constants::speaker_all,
+          volume,
+          constants::stimulus_delay,
+          duration*2,
+          duration,
+          1);
       }
     }
     else if (mode_ptr == &constants::stimulus_mode_noise)
@@ -252,16 +252,16 @@ void AuditoryStimulator::stimulus(bool play,
       if (duration <= 0)
       {
         playNoiseAt(&audio_controller::constants::speaker_all,
-                    volume);
+          volume);
       }
       else
       {
         addNoisePwmAt(&audio_controller::constants::speaker_all,
-                      volume,
-                      constants::stimulus_delay,
-                      duration*2,
-                      duration,
-                      1);
+          volume,
+          constants::stimulus_delay,
+          duration*2,
+          duration,
+          1);
       }
     }
     else if (mode_ptr == &constants::stimulus_mode_filtered_noise)
@@ -269,20 +269,20 @@ void AuditoryStimulator::stimulus(bool play,
       if (duration <= 0)
       {
         playFilteredNoiseAt(frequency,
-                            bandwidth,
-                            &audio_controller::constants::speaker_all,
-                            volume);
+          bandwidth,
+          &audio_controller::constants::speaker_all,
+          volume);
       }
       else
       {
         addFilteredNoisePwmAt(frequency,
-                              bandwidth,
-                              &audio_controller::constants::speaker_all,
-                              volume,
-                              constants::stimulus_delay,
-                              duration*2,
-                              duration,
-                              1);
+          bandwidth,
+          &audio_controller::constants::speaker_all,
+          volume,
+          constants::stimulus_delay,
+          duration*2,
+          duration,
+          1);
       }
     }
     else if (mode_ptr == &constants::stimulus_mode_tone_pwm)
@@ -290,21 +290,21 @@ void AuditoryStimulator::stimulus(bool play,
       if (duration <= 0)
       {
         startTonePwmAt(frequency,
-                       &audio_controller::constants::speaker_all,
-                       volume,
-                       constants::stimulus_delay,
-                       pwm_period,
-                       pwm_period/2);
+          &audio_controller::constants::speaker_all,
+          volume,
+          constants::stimulus_delay,
+          pwm_period,
+          pwm_period/2);
       }
       else
       {
         addTonePwmAt(frequency,
-                     &audio_controller::constants::speaker_all,
-                     volume,
-                     constants::stimulus_delay,
-                     pwm_period,
-                     pwm_period/2,
-                     duration/pwm_period);
+          &audio_controller::constants::speaker_all,
+          volume,
+          constants::stimulus_delay,
+          pwm_period,
+          pwm_period/2,
+          duration/pwm_period);
       }
     }
     else if (mode_ptr == &constants::stimulus_mode_noise_pwm)
@@ -312,19 +312,19 @@ void AuditoryStimulator::stimulus(bool play,
       if (duration <= 0)
       {
         startNoisePwmAt(&audio_controller::constants::speaker_all,
-                        volume,
-                        constants::stimulus_delay,
-                        pwm_period,
-                        pwm_period/2);
+          volume,
+          constants::stimulus_delay,
+          pwm_period,
+          pwm_period/2);
       }
       else
       {
         addNoisePwmAt(&audio_controller::constants::speaker_all,
-                      volume,
-                      constants::stimulus_delay,
-                      pwm_period,
-                      pwm_period/2,
-                      duration/pwm_period);
+          volume,
+          constants::stimulus_delay,
+          pwm_period,
+          pwm_period/2,
+          duration/pwm_period);
       }
     }
     else if (mode_ptr == &constants::stimulus_mode_filtered_noise_pwm)
@@ -332,23 +332,23 @@ void AuditoryStimulator::stimulus(bool play,
       if (duration <= 0)
       {
         startFilteredNoisePwmAt(frequency,
-                                bandwidth,
-                                &audio_controller::constants::speaker_all,
-                                volume,
-                                constants::stimulus_delay,
-                                pwm_period,
-                                pwm_period/2);
+          bandwidth,
+          &audio_controller::constants::speaker_all,
+          volume,
+          constants::stimulus_delay,
+          pwm_period,
+          pwm_period/2);
       }
       else
       {
         addFilteredNoisePwmAt(frequency,
-                              bandwidth,
-                              &audio_controller::constants::speaker_all,
-                              volume,
-                              constants::stimulus_delay,
-                              pwm_period,
-                              pwm_period/2,
-                              duration/pwm_period);
+          bandwidth,
+          &audio_controller::constants::speaker_all,
+          volume,
+          constants::stimulus_delay,
+          pwm_period,
+          pwm_period/2,
+          duration/pwm_period);
       }
     }
   }
@@ -402,7 +402,7 @@ void AuditoryStimulator::stimulus0Handler(modular_server::Pin * pin_ptr)
   {
     int pin_value = pin_ptr->getValue();
     if (((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high)) ||
-        ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
+      ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
     {
       play = true;
     }
@@ -416,12 +416,12 @@ void AuditoryStimulator::stimulus0Handler(modular_server::Pin * pin_ptr)
     return;
   }
   stimulus(play,
-           stimulus_mode_ptr,
-           frequency,
-           duration,
-           volume,
-           bandwidth,
-           pwm_period);
+    stimulus_mode_ptr,
+    frequency,
+    duration,
+    volume,
+    bandwidth,
+    pwm_period);
   stimulus_0_playing_ = play;
 }
 
@@ -446,7 +446,7 @@ void AuditoryStimulator::stimulus1Handler(modular_server::Pin * pin_ptr)
   {
     int pin_value = pin_ptr->getValue();
     if (((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high)) ||
-        ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
+      ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
     {
       play = true;
     }
@@ -460,12 +460,12 @@ void AuditoryStimulator::stimulus1Handler(modular_server::Pin * pin_ptr)
     return;
   }
   stimulus(play,
-           stimulus_mode_ptr,
-           frequency,
-           duration,
-           volume,
-           bandwidth,
-           pwm_period);
+    stimulus_mode_ptr,
+    frequency,
+    duration,
+    volume,
+    bandwidth,
+    pwm_period);
   stimulus_1_playing_ = play;
 }
 
@@ -490,7 +490,7 @@ void AuditoryStimulator::stimulus2Handler(modular_server::Pin * pin_ptr)
   {
     int pin_value = pin_ptr->getValue();
     if (((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high)) ||
-        ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
+      ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
     {
       play = true;
     }
@@ -504,12 +504,12 @@ void AuditoryStimulator::stimulus2Handler(modular_server::Pin * pin_ptr)
     return;
   }
   stimulus(play,
-           stimulus_mode_ptr,
-           frequency,
-           duration,
-           volume,
-           bandwidth,
-           pwm_period);
+    stimulus_mode_ptr,
+    frequency,
+    duration,
+    volume,
+    bandwidth,
+    pwm_period);
   stimulus_2_playing_ = play;
 }
 
@@ -534,7 +534,7 @@ void AuditoryStimulator::stimulus3Handler(modular_server::Pin * pin_ptr)
   {
     int pin_value = pin_ptr->getValue();
     if (((pin_value == HIGH) && (stimulus_polarity_ptr == &constants::stimulus_polarity_high)) ||
-        ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
+      ((pin_value == LOW) && (stimulus_polarity_ptr == &constants::stimulus_polarity_low)))
     {
       play = true;
     }
@@ -548,11 +548,11 @@ void AuditoryStimulator::stimulus3Handler(modular_server::Pin * pin_ptr)
     return;
   }
   stimulus(play,
-           stimulus_mode_ptr,
-           frequency,
-           duration,
-           volume,
-           bandwidth,
-           pwm_period);
+    stimulus_mode_ptr,
+    frequency,
+    duration,
+    volume,
+    bandwidth,
+    pwm_period);
   stimulus_3_playing_ = play;
 }
